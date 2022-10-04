@@ -1,0 +1,1 @@
+[{"id":1,"title":"Escuadra","price":123.45,"thumbnail":"https://www.coder.com"},{"id":2,"title":"Calculadora","price":333.45,"thumbnail":"https://www.coder.com"},{"id":3,"title":"Globo","price":443.45,"thumbnail":"https://www.coder.com"}]
