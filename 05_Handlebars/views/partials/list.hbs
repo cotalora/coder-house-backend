@@ -1,0 +1,12 @@
+<div id="get-list">
+    <div class="card-container">
+        {{#each products}}
+        <div class="card justify-content-between">
+            <img src={{this.thumbnail}} class="card-img-top p-3" alt={{this.title}}>
+            <div class="card-body card-body-background">
+                <p class="card-text">{{this.title}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

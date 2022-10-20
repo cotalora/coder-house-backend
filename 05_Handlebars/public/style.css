@@ -1,0 +1,47 @@
+body {
+    padding: 20px;
+}
+
+.card {
+    min-height: 355px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(200px, 1fr)
+    );
+    gap: 20px
+}
+
+.card-body-background {
+    background: #a9d6d4;
+    height: 100px;
+    max-height: 100px;
+}
+
+.main-container {
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-change-container {
+    margin: 20px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
+    border-top: 1px solid #000;
+
+    display: flex;
+    justify-content: flex-end;
+}
