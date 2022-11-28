@@ -12,7 +12,6 @@ class ProductController {
 
     async products (req, res) {
         const products = await getProducts();
-        console.log(products);
         res.json(products?.map(product => {
             return {
                 nombre: product.nombre,
