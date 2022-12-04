@@ -6,17 +6,6 @@ const messageOptionConnection = {
     useNullAsDefault: true
 }
 
-const productOptionConnection = {
-    client: 'mysql',
-    connection: {
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'products'
-    }
-}
-
 module.exports = {
-    messageOptionConnection,
-    productOptionConnection
+    messageOptionConnection
 }

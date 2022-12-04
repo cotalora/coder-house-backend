@@ -23,7 +23,7 @@ body {
 }
 
 .custom-table-container {
-    max-height: 330px;
+    max-height: 450px;
     overflow-y: auto;
 }
 

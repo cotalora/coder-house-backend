@@ -18,6 +18,7 @@ const messageUI = (message) => {
     <span class="email-text">${message.email}</span>
     <span class="date-text"><b>[</b>${message.date}<b>]</b></span>
     <span class="message-text"><b>:</b>${message.message}</span>
+    <img class="avatar-image" src='${message.image}' alt='avatar' />
     `;
 
     return div;

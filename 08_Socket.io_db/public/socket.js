@@ -8,10 +8,15 @@ saveProduct = (title, price, thumbnail) => {
     });
 }
 
-saveChat = (email, message) => {
+saveChat = (email, message, avatar, name, lastName, age, alias) => {
     socket.emit('chat', {
         email,
-        message
+        message,
+        avatar,
+        name,
+        lastName,
+        age,
+        alias
     });
 }
 

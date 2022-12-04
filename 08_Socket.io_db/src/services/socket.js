@@ -1,5 +1,5 @@
 const socketIo = require('socket.io');
-const { allproducts, addProduct } = require('./productsHelper');
+const { allproducts } = require('./productsHelper');
 const { sql } = require('../../database/messageClientSQL');
 
 let io;
@@ -25,7 +25,6 @@ const initWsServer = (server) => {
 
 const wsProducts = (socket) => {
     socket.on('products', async (data) => {
-        await addProduct(data);
         const products = await allproducts();
         io.emit('products', products);
     });
@@ -34,19 +33,27 @@ const wsProducts = (socket) => {
 const wsChat = async (socket) => {
     //await sql.createTable();
 
-    const messages = await sql.getAll();
+    const messages = /* await sql.getAll() */ [];
     messages.forEach(message => {
         io.emit('chat', message);
     });
     
     socket.on('chat', async (data) => {
         const newMessage = {
-            email: data.email,
-            message: data.message,
-            date: new Date().toLocaleString()
+            author: {
+                id: data.email,
+                nombre: data.name,
+                apellido: data.lastName,
+                edad: data.age,
+                alias: data.alias,
+                avatar: data.avatar
+            },
+            text: data.message
         }
 
-        const message = await sql.save(newMessage);
+        console.log(newMessage);
+
+        //const message = await sql.save(newMessage);
 
         io.emit('chat', message);
     });
