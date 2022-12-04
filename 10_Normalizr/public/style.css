@@ -1,0 +1,70 @@
+body {
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.product-component {
+    flex: 1 1 50%;
+}
+
+.chat-component {
+    flex: 1 1 50%;
+}
+
+.main-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-table-container {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.custom-table {
+}
+
+.product-img {
+    width: 50px;
+    height: 50px;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.email-text {
+    color: blue;
+}
+
+.date-text {
+    color: crimson;
+}
+
+.message-text {
+    color: green;
+}
+
+.avatar-image {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.messages-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-send {
+    margin-left: 10px;
+}
