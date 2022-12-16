@@ -10,3 +10,5 @@
 /10_Normalizr/.env
 /11_Sessions/.env
 /11_Sessions/node_modules
+/12_Authorization/.env
+/12_Authorization/node_modules
