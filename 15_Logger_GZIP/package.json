@@ -1,0 +1,36 @@
+{
+  "name": "14-clousterfork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-cluster": "node index-cluster.js",
+    "dev-cluster": "nodemon index-cluster.js",
+    "start-forever": "forever index-forever.js -f",
+    "start-pm2-fork": "pm2 start index-pm2.js -f",
+    "start-pm2-cluster": "pm2 start index-pm2.js --watch -i max -f",
+    "stop-all-pm2": "pm2 stop all",
+    "list-pm2": "pm2 list",
+    "kill-pm2": "pm2 kill",
+    "artillery:fork": "artillery quick --count 50 -n 20 http://localhost:8081",
+    "artillery:cluster": "artillery quick --count 50 -n 20 http://localhost:8081",
+    "start:profilling": "node --prof index-cluster.js",
+    "0x:cluster": "0x index-cluster.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "0x": "^5.4.1",
+    "autocannon": "^7.10.0",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "forever": "^4.0.3",
+    "log4js": "^6.7.1",
+    "minimist": "^1.2.7",
+    "pm2": "^5.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

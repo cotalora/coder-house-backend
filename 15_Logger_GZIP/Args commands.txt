@@ -1,0 +1,7 @@
+yarn dev -m [CLUSTER | FORK] -----> Cluster
+yarn start-forever -----> Forever
+yarn forever stop [PID] -----> Forever
+yarn forever list -----> Forever
+yarn start-pm2-fork [FORK] ----> PM2
+yarn start-pm2-cluster [CLUSTER] ----> PM2
+yarn kill-pm2 ----> PM2

@@ -1,0 +1,98 @@
+const os = require('os');
+const { loggerError } = require("../../log4js.conf");
+
+const information = (req, res) => {
+    try {
+        res.json({
+            'Argumentos de entrada': process.argv.reduce((a, v) => ({ ...a, [v]: v }), {}),
+            'Nombre de la plataforma': process.platform,
+            'Versión de Node': process.version,
+            'Memoria total reservada (rss)': process.memoryUsage().heapTotal,
+            'Path de ejecución': process.execPath,
+            'Process id': process.pid,
+            'Carpetas del proyecto': process.cwd(),
+            'Número de procesadores': os.cpus().length,
+            'data': [
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+                { id: 1, name: 'John', age: 20 },
+            ]
+        })
+    } catch (error) {
+        res.json({ error });
+        loggerError.error(error);
+    }
+}
+
+module.exports = {
+    information
+};
