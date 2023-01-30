@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index-cluster.js",
     "start-cluster": "node index-cluster.js",
     "dev-cluster": "nodemon index-cluster.js",
     "start-forever": "forever index-forever.js -f",
